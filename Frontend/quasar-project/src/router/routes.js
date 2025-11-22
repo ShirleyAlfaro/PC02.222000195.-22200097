@@ -1,8 +1,17 @@
+import DigimonListPage from 'pages/DigimonListPage.vue';
+
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    children: [
+      { path: '', component: () => import('pages/IndexPage.vue') },
+    ],
+  },
+
+  {
+    path: '/digimons',
+    component: DigimonListPage,
   },
 
   // Always leave this as last one,
